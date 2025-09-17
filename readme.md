@@ -14,27 +14,30 @@ Plug 'sirver/ultisnips'
 
 Plug 'lervag/vimtex'
     let g:tex_flavor='latex'
-    let g:vimtex_view_method='zathura'
-    let g:vimtex_quickfix_mode=0
-
-Plug 'KeitaNakamura/tex-conceal.vim'
-    set conceallevel=1
-    let g:tex_conceal='abdmg'
-    hi Conceal ctermbg=none
+    let g:vimtex_view_method='skim'
 
 setlocal spell
-set spelllang=en_us
-inoremap <C-l> <c-g>u<Esc>[s1z=`]a<c-g>u
+set spelllang=en
+inoremap <C-l> <c-g>u<Esc>[s1z=`]a<c-g>u " Use ctrl+L to correct spell
+
+" Use vimtex's own syntax conceal
+let g:vimtex_syntax_conceal = {
+          \ 'accents': 1,
+          \ 'ligatures': 1,
+          \ 'cites': 1,
+          \ 'fancy': 1,
+          \ 'spacing': 1,
+          \ 'greek': 1,
+          \ 'math_bounds': 0,
+          \ 'math_delimiters': 1,
+          \ 'math_fracs': 1,
+          \ 'math_super_sub': 1,
+          \ 'math_symbols': 1,
+          \ 'sections': 0,
+          \ 'styles': 1,
+          \}
+
+set conceallevel=2 " otherwise conceal doesn't work
 ```
-
-For the colorscheme, install [pywal](https://github.com/dylanaraps/pywal), add the following to your `.vimrc`
-
-```vim
-Plug 'dylanaraps/wal'
-colorscheme wal
-set background=dark
-```
-
-Finally, execute `wal --theme base16-nord`.
 
 Something not working as expected? Feel free to open an issue!
