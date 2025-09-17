@@ -2,6 +2,9 @@
 
 *[How I'm able to take notes in mathematics lectures using LaTeX and Vim](https://castel.dev/post/lecture-notes-1/)*
 
+I mainly work in the context of physics while Castel is more in mathematics.
+The snippet is modified as such to better suit applications in physics and physics papers.
+
 ## Vim configuration
 
 Copy `tex.snippets` to `~/.vim/UltiSnips/` and assuming you're using [Vim Plug](https://github.com/junegunn/vim-plug), add the following to your `.vimrc`:
