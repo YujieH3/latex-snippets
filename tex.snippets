@@ -453,10 +453,10 @@ endsnippet
 
 priority 200
 context "math()"
-snippet '(?<!\\)(arcsin|arccos|arctan|arccot|arccsc|arcsec|pi|zeta|int)' "ln" rwA
+snippet '(?<!\\)(arcsin|arccos|arctan|arccot|arccsc|arcsec|pi|zeta)' "ln" rwA
 \\`!p snip.rv = match.group(1)`
 endsnippet
-
+# Modified to remove int
 
 priority 100
 context "math()"
@@ -642,3 +642,21 @@ snippet DD "D" iA
 endsnippet
 
 # vim:ft=snippets
+
+# YujieH3
+
+context "math()"
+snippet "  " "math spacing" riA
+ \, $0
+endsnippet
+
+context "math()"
+snippet def "equivalent" w
+\equiv
+endsnippet
+
+# Requires \usepackage{physics}
+context "math()"
+snippet vb "vector" iA
+\vb{${1:v}}$0
+endsnippet
